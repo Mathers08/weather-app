@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$bgPrimaryDark: rgb(9, 15, 24);
+$bgSecondaryDark: rgb(26, 34, 47);
+$colorPrimaryDark: rgb(223, 226, 232);
+$colorSecondaryDark: rgb(120, 123, 129);
+
+$bgPrimaryLight: rgb(245, 245, 245);
+$bgSecondaryLight: rgb(227, 230, 235);
+$colorPrimaryLight: rgb(32, 43, 59);
+$colorSecondaryLight: rgb(163, 168, 176);
+
+$tertiary: rgba(0, 119, 204);
+
+$borderRadius: 30px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: $bgPrimaryDark;
+  color: $colorPrimaryDark;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  margin: 25px 50px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
