@@ -25,7 +25,7 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Preview />} />
         <Route path="start" element={<Home weatherData={weatherData} />} />
-        <Route path="cities" element={<Cities />} />
+        <Route path="cities" element={<Cities weatherData={weatherData} />} />
         <Route path="map" element={<Map />} />
         <Route path="settings" element={<Settings />} />
       </Route>

@@ -1,8 +1,7 @@
 @import "../../index";
 
 .forecast-hourly {
-  grid-area: b;
-  background-color: $bgSecondary;
+  grid-area: hourly;
   border-radius: $borderRadius;
   padding: 1.2rem 2rem;
 

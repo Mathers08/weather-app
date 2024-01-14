@@ -1,0 +1,58 @@
+@import "../../index";
+
+.city-list {
+  grid-area: cities;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &-item {
+    background-color: $bgSecondary;
+    color: $colorSecondary;
+    border-radius: $borderRadius;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .4s all ease-in-out;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &-main {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        &-name {
+        }
+
+        &-time {
+          font-weight: 700;
+        }
+      }
+
+      img {
+        width: 5rem;
+        height: fit-content;
+      }
+    }
+
+    &__temp {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.city-list-item--active, .city-list-item:hover {
+  transition: .4s all ease-in-out;
+  background-color: $bgPrimary;
+  color: $colorPrimary;
+  border: 3px solid $tertiary;
+}

@@ -1,8 +1,7 @@
 @import "../../index";
 
 .forecast-daily {
-  grid-area: d;
-  background-color: $bgSecondary;
+  grid-area: daily;
   border-radius: $borderRadius;
   padding: 2rem 3rem;
 
