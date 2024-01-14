@@ -1,12 +1,13 @@
-@import "../index";
+@import "../../index";
 
 .navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $bgSecondaryDark;
+  background-color: $bgSecondary;
   border-radius: $borderRadius;
   padding: 2rem 1rem;
+  flex: 0 1 8%;
 
   &__logo {
     flex-basis: 17%;
@@ -28,8 +29,9 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    color: $colorPrimaryDark;
+    color: $colorPrimary;
     font-weight: 700;
+    cursor: pointer;
 
     img {
       width: 2rem;

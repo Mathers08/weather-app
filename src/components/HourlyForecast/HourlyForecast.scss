@@ -1,0 +1,54 @@
+@import "../../index";
+
+.forecast-hourly {
+  grid-area: b;
+  background-color: $bgSecondary;
+  border-radius: $borderRadius;
+  padding: 1.2rem 2rem;
+
+  &__title {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: rgb(120, 123, 129);
+        position: absolute;
+        left: 150%;
+      }
+    }
+
+    &-time {
+      font-weight: 700;
+    }
+
+    &-icon {
+      img {
+
+      }
+    }
+
+    &-temp {
+      color: $colorSecondary;
+      font-weight: 700;
+    }
+  }
+}

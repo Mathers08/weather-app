@@ -6,6 +6,7 @@ export interface Weather {
   feels_like: number;
   hourly: Hourly[];
   humidity: number;
+  pressure: number;
   icon: string;
   lat: number;
   lon: number;

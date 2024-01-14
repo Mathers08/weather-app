@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-$bgPrimaryDark: rgb(9, 15, 24);
-$bgSecondaryDark: rgb(26, 34, 47);
-$colorPrimaryDark: rgb(223, 226, 232);
-$colorSecondaryDark: rgb(120, 123, 129);
-
-$bgPrimaryLight: rgb(245, 245, 245);
-$bgSecondaryLight: rgb(227, 230, 235);
-$colorPrimaryLight: rgb(32, 43, 59);
-$colorSecondaryLight: rgb(163, 168, 176);
-
+$bgPrimary: rgb(9, 15, 24);
+$bgSecondary: rgb(26, 34, 47);
+$colorPrimary: rgb(223, 226, 232);
+$colorSecondary: rgb(120, 123, 129);
 $tertiary: rgba(0, 119, 204);
-
 $borderRadius: 30px;
+
+[data-theme='light'] {
+  $bgPrimary: rgb(245, 245, 245);
+  $bgSecondary: rgb(227, 230, 235);
+  $colorPrimary: rgb(32, 43, 59);
+  $colorSecondary: rgb(163, 168, 176);
+}
 
 *,
 *::before,
@@ -27,19 +27,36 @@ $borderRadius: 30px;
 }
 
 body {
-  background-color: $bgPrimaryDark;
-  color: $colorPrimaryDark;
+  background-color: $bgPrimary;
+  color: $colorPrimary;
   font-family: 'Montserrat', sans-serif;
-  width: 100%;
   height: calc(100vh - 50px);
   overflow: hidden;
-  margin: 25px 50px;
+  margin: 1.5rem 2rem;
 }
 
 .wrapper {
   display: flex;
-  gap: 30px;
+  gap: 1.5rem;
   height: 100%;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.btn {
+  background-color: $tertiary;
+  color:  $colorPrimary;
+  padding: 8px 20px;
+  border-radius: $borderRadius;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 a {

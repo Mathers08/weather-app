@@ -1,0 +1,10 @@
+@import "../index";
+
+.main-section {
+  flex-grow: 1;
+  height: 100%;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-areas: "a d" "b d" "c d";
+}

@@ -15,7 +15,7 @@ const getWeatherData = async (infoType, searchParams) => {
 const formatCurrentWeather = (data) => {
   const {
     coord: { lat, lon },
-    main: { temp, feels_like, humidity },
+    main: { temp, feels_like, humidity, pressure },
     name,
     dt,
     sys: { country, sunrise, sunset },
@@ -31,6 +31,7 @@ const formatCurrentWeather = (data) => {
     feels_like: +feels_like.toFixed(),
     temp: +temp.toFixed(),
     humidity,
+    pressure,
     name,
     dt,
     country,
@@ -45,7 +46,7 @@ const formatCurrentWeather = (data) => {
 const formatForecastWeather = (data) => {
   let { timezone, daily, hourly } = data;
 
-  daily = daily.slice(1, 6).map((d) => {
+  daily = daily.slice(1, 8).map((d) => {
     return {
       title: formatToLocalTime(d.dt, timezone, 'cccc'),
       tempDay: removeMinusBeforeZero(+d.temp.day.toFixed()),

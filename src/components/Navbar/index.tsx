@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import './Navbar.scss';
-import { cities, cloudy, dark_theme, map, settings, weather } from "../assets";
+import { cities, cloudy, dark_theme, map, settings, weather } from "../../assets";
 import { NavLink } from "react-router-dom";
 
 interface NavbarProps {
-
+  switchTheme: () => void;
 }
 
-const Navbar: FC<NavbarProps> = () => {
+const Navbar: FC<NavbarProps> = ({ switchTheme }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -33,7 +33,7 @@ const Navbar: FC<NavbarProps> = () => {
           <p>Settings</p>
         </NavLink>
       </ul>
-      <div className="navbar__theme">
+      <div className="navbar__theme" onClick={switchTheme}>
         <img src={dark_theme} alt="dark_theme" />
         <p>Theme</p>
       </div>

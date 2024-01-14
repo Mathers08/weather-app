@@ -1,0 +1,41 @@
+@import "../../index";
+
+.city-description {
+  grid-area: a;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+.city-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &-name {
+      font-size: 3rem;
+    }
+
+    &-text {
+      font-size: 1rem;
+      color: $colorSecondary;
+    }
+  }
+
+  &__temperature {
+    font-size: 2rem;
+    font-weight: 700;
+
+  }
+}
+
+.city-weather {
+  img {
+    width: 8rem;
+  }
+}
